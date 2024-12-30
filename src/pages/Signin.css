@@ -1,0 +1,100 @@
+/* 全局樣式 */
+
+
+/* 容器 */
+.Signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* 高度始終占滿視窗 */
+  background-color: black;
+  padding: 20px;
+  box-sizing: border-box; /* 包括內邊距和邊框 */
+}
+
+/* 登入框 */
+.Signin-box {
+  width: 100%;
+  max-width: 400px; /* 最大寬度 */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* 標誌 */
+.logo {
+  font-size: 24px;
+  color: #333;
+  
+}
+
+/* 表單 */
+.Signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 表單項目之間的間距 */
+}
+
+/* 輸入框 */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* 按鈕 */
+.Signin-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #3897f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Signin-button:hover {
+  background-color: #3182ce;
+}
+
+/* 分隔線 */
+.divider {
+  margin: 20px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* 忘記密碼 */
+.forgot-password-link {
+  font-size: 12px;
+  color: #00376b;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* 註冊區域 */
+.register-section {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link {
+  color: #3897f0;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+.account-container {
+    display: flex;
+    min-height: 100vh; /* 父容器高度填滿視口 */
+    background-color: #f9f9f9; /* 主內容區域背景顏色 */
+  }
+  
+  .sidebar {
+    width: 250px; /* 側邊欄寬度 */
+    background-color: rgb(0, 0, 0); /* 側邊欄背景顏色 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0; /* 上下留白 */
+  }
+  
+  .sidebar h3 {
+    margin: 0 20px 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 20px; /* 控制項目之間的間距 */
+    background-color: #2a2a2a; /* 項目背景顏色 */
+    border-radius: 8px; /* 圓角效果 */
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: #444; /* 懸停背景顏色 */
+  }
+  
+  .sidebar a.active {
+    background-color: #ffa500; /* 選中項目背景顏色 */
+    color: black; /* 選中項目文字顏色 */
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #000000; /* 主內容區域背景色 */
+  }
+  

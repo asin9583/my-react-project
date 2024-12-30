@@ -1,0 +1,107 @@
+body {
+  background-color: #000; /* 黑色背景 */
+}
+.register-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto; /* 調整上下間距為更合適的 40px */
+  padding: 30px 20px; /* 減少內邊距，上下 30px，左右 20px */
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.register-container h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.register-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* 保證內邊距不影響寬度 */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 4px rgba(24, 119, 242, 0.5);
+}
+
+.birth-select {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #165dbe;
+  transform: scale(1.02); /* 微縮放效果 */
+}
+
+button:active {
+  background-color: #144a9e;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    margin: 30px auto; /* 減少上下間距 */
+    padding: 20px 15px; /* 減少內邊距 */
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    margin: 20px auto; /* 手機設備進一步減少上下間距 */
+    padding: 15px 10px; /* 減少內邊距 */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
