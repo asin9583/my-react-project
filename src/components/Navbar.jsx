@@ -4,12 +4,13 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 是否已登入
+  const [isAdmin, setIsAdmin] = useState(false); // 是否為 ADMIN 權限
   const [menuVisible, setMenuVisible] = useState(false); // 下拉選單顯示狀態
   const [userEmail, setUserEmail] = useState(""); // 儲存使用者 Email
   const [searchQuery, setSearchQuery] = useState(""); // 搜尋關鍵字
   const navigate = useNavigate();
 
-  // 檢查登入狀態
+  // 檢查登入狀態與權限
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
@@ -21,6 +22,7 @@ const Navbar = () => {
         if (result.data.isLoggedIn) {
           setIsLoggedIn(true);
           setUserEmail(result.data.email || ""); // 設置 Email
+          setIsAdmin(result.data.role === "ADMIN"); // 檢查是否為 ADMIN
         }
       } catch (error) {
         console.error("檢查登入狀態失敗:", error);
@@ -38,6 +40,7 @@ const Navbar = () => {
       });
       setIsLoggedIn(false);
       setUserEmail("");
+      setIsAdmin(false);
       window.location.href = "/";
     } catch (error) {
       console.error("登出失敗:", error);
@@ -77,10 +80,12 @@ const Navbar = () => {
       <div className="actions">
         {isLoggedIn ? (
           <>
-            {/* 新增的後台管理按鈕 */}
-            <Link to="/admin" className="admin-button">
-              後台管理
-            </Link>
+            {/* 後台管理按鈕，僅在 ADMIN 權限下顯示 */}
+            {isAdmin && (
+              <Link to="/admin" className="admin-button">
+                後台管理
+              </Link>
+            )}
             <div
               className="account"
               onMouseEnter={toggleMenu}
